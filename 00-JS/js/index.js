@@ -1,3 +1,7 @@
+import { MyArray } from './MyArray.js';
+import { utilisateurs } from './MyArray.js';
+import MOVIES from './MyArray.js';
+
 let prenom = "David";
 let nom = 'Doe';
 let adresse = `3ter 'rue' "d'arsonval", ${75015}`;
@@ -104,3 +108,6 @@ console.log("Tableau Filtré: " + tableau2);
 
 tableau2 = prenoms.myMap(prenom => prenom.toUpperCase());
 console.log("Nouveau Tableau: " + tableau2);
+
+console.log("Utilisateurs : ", utilisateurs);
+console.log("Movies : ", MOVIES);
