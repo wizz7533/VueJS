@@ -72,27 +72,11 @@ voiture = {
 }
 
 
-class MyArray {
-    // Regroupe tous les arguments sous forme de tableau
-    // permet de faire une fonciton qui prend un nombre indeterminé d'arguments
-    constructor(...prenoms) {
-        // console.log("Prenoms: ", prenoms);
-        this.monTableau = prenoms;
-    }
 
-    myForEach(maCallBack) {
-        for (const element of this.monTableau) {
-            maCallBack(element);
-        }
-    }
-    myFilter() {
 
-    }
-
-    myMAp() {
-
-    }
-}
+// Array.from()
+MyArray.description();
+// MyArray.myFilter(); <- ce n'est pas une méthode statique.
 
 let prenoms = ['Maude', 'Ella', 'Rick', 'Alain'];
 prenoms = new Array('Maude', 'Ella', 'Rick', 'Alain');
@@ -104,9 +88,19 @@ prenoms.forEach(function(prenom) {
     console.log("Le prenom: " + prenomSensInverse);
 })
 
+tableau2 = prenoms.filter(function(prenom) {
+    return (prenom.length > 4)
+});
+console.log(tableau2);
+
 console.warn(" => MyForEach");
 prenoms = new MyArray('Maude', 'Ella', 'Rick', 'Alain')
 prenoms.myForEach(function(prenom) {
     let prenomSensInverse = prenom.split('').reverse().join('');
     console.log("Le prenom: " + prenomSensInverse);
 });
+tableau2 = prenoms.myFilter(prenom => prenom.length > 4);
+console.log("Tableau Filtré: " + tableau2);
+
+tableau2 = prenoms.myMap(prenom => prenom.toUpperCase());
+console.log("Nouveau Tableau: " + tableau2);
