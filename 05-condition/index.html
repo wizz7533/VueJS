@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <script src="../vue.global.js"></script>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if=isVisible>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, debitis molestiae. Fuga facilis laboriosam sit maxime. Harum eaque quidem a necessitatibus nisi natus dolores quibusdam, consequatur dolorem quaerat culpa suscipit.</p>
+        <h2 v-else>Hello</h2>
+
+        <template v-if="isVisible">
+            <h2>Voici mes éléments</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos atque dolore facilis perspiciatis voluptas. Repudiandae ut rem natus optio earum placeat laudantium incidunt, sint quae animi ratione, suscipit vitae facilis.</p>
+        </template>
+        <template v-else>Rien à afficher</template>
+
+        <p v-if="resultat == 'even'">c'est pair</p>
+        <p v-else-if="resultat == 'odd'">c'est impair</p>
+        <p v-else>Je n'ai pas compris</p>
+
+        <!-- v-show équivalent au css display: none ou block ( ou défini par son élément mère) -->
+        <p v-show="isVisible">
+            V-show : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, magnam ipsum eveniet beatae, magni, quasi impedit voluptas dolor incidunt perferendis nisi enim fugiat rem saepe nulla ullam quas? Aliquam, ab.
+        </p>
+    </div>
+    <script>
+    </script>
+</body>

@@ -362,7 +362,8 @@ var Vue = (function(exports) {
                         typeof window !== 'undefined' ?
                         window :
                         typeof global !== 'undefined' ?
-                        global : {}));
+                        global :
+                        {}));
             };
 
             const targetMap = new WeakMap();
@@ -867,10 +868,12 @@ var Vue = (function(exports) {
                         // iterator protocol
                         next() {
                             const { value, done } = innerIterator.next();
-                            return done ? { value, done } : {
-                                value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
-                                done
-                            };
+                            return done ?
+                                { value, done } :
+                                {
+                                    value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
+                                    done
+                                };
                         },
                         // iterable protocol
                         [Symbol.iterator]() {

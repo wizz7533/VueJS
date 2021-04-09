@@ -12,8 +12,10 @@
 <body>
     <div id="app">
         <a v-bind:href="myLien">Lien vers Dawan</a>
+        <!-- syntaxe raccourcis de v-bind:attr -->
+        <a :href="myLien">Dawan</a>
         <button v-bind:disabled="isDisabled">Valider</button>
-
+        <a :href="myLien" v-bind:title="'Lien vers Dawan: ' + mylien">Lien vers dawan</a>
     </div>
 
     <script>

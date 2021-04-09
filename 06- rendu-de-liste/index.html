@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <script src="../vue.global.js"></script>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <p>{{prenoms[0]}}</p> -->
+        <h2>Liste des prénoms non ordonnés</h2>
+        <ul>
+            <li v-for="prenom of prenoms">
+                {{ prenom }}
+
+            </li>
+        </ul>
+        <h2>Liste des prénoms ordonnés ET avec index</h2>
+        <ol>
+            <li v-for="(p, index) of prenoms">
+                prenoms[{{index}}] : {{ p }}
+            </li>
+        </ol>
+        <h2>Liste des utilisateurs</h2>
+        <p v-for="utilisateur of utilisateurs">
+            {{ utilisateur.nom.toUpperCase() }} {{ utilisateur.prenom}}
+        </p>
+        <p v-for="{nom, prenom} of utilisateurs">
+            {{ nom }} {{ prenom }}
+        </p>
+    </div>
+    <script>
+    </script>
+</body>

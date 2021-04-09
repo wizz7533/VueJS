@@ -11,26 +11,22 @@
 
 <body>
     <div id="app">
-        <!-- L'interpolation -->
-        <h1>{{message}}</h1>
-        <p>posté le: {{maDate}}</p>
-        <p>1 + 1 = {{1+1}}</p>
+        <h1>{{ titre }}</h1>
+        <p>{{ message }}</p>
+        <img :src="lienImg" :alt="alt" />
 
     </div>
-
     <script>
         let app = Vue.createApp({
-            data: function() {
-                const variables = {
-                    message: 'Hello World !',
-                    maDate: new Date().toLocaleDateString(),
-                }
-                return variables;
-            }
+            data() {
+                return {
+                    titre: "Akita",
+                    message: "Japan Dog",
+                    lienImg: " https://upload.wikimedia.org/wikipedia/commons/7/78/Akita_inu.jpeg",
+                    alt: "photo d'Akita Inu",
 
-        });
-        app.mount('#app');
+                }
+            }
+        }).mount("#app");
     </script>
 </body>
-
-</html>
