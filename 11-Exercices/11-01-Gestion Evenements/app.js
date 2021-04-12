@@ -1,6 +1,8 @@
 let app = Vue.createApp({
     data() {
-        return {}
+        return {
+            imgUrl: "",
+        }
     },
     methods: {
 
