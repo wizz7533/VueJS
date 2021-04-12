@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuejs</title>
-    <script src="../vue.global.js"></script>
+    <script src="../../vue.global.js"></script>
     <script src="app.js" defer></script>
     <link rel="shortcut icon" href="../vuejs.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
@@ -14,13 +14,14 @@
 
 <body>
     <div id="app">
-        <p v-if="imgSrc == null">
+        <p v-if="imgUrl == null || imgUrl == ''">
             Aucune Image Trouvée
         </p>
-        <img src="" alt="" />
-        <button>Chien</button>
-        <button>Chat</button>
-        <button>Lapin</button>
+        <img :src="imgUrl" alt="" style="width : 300px; height: 300px;" />
+        <br/>
+        <button v-on:click="changeImage(1)">Chien</button>
+        <button v-on:click="changeImage(2)">Chat</button>
+        <button v-on:click="changeImage(3)">Lapin</button>
 
 
     </div>
