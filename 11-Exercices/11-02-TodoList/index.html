@@ -14,10 +14,10 @@
 
 <body>
     <div id="app">
-        <p v-if="imgUrl == ''">
+        <p v-if="imgUrl == null || imgUrl == ''">
             Aucune Image Trouvée
         </p>
-        <img v-else v-bind:src="imgUrl" alt="" style="width : 400px; height: 300px;" />
+        <img :src="imgUrl" alt="" style="width : 300px; height: 300px;" />
         <br/>
         <button v-on:click="changeImage(1)">Chien</button>
         <button v-on:click="changeImage(2)">Chat</button>
