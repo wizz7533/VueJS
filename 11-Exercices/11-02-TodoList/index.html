@@ -7,23 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuejs</title>
     <script src="../../vue.global.js"></script>
-    <script src="app.js" defer></script>
+    <script src="app.js" type="module" defer></script>
     <link rel="shortcut icon" href="../vuejs.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div id="app">
-        <p v-if="imgUrl == null || imgUrl == ''">
-            Aucune Image Trouvée
-        </p>
-        <img :src="imgUrl" alt="" style="width : 300px; height: 300px;" />
-        <br/>
-        <button v-on:click="changeImage(1)">Chien</button>
-        <button v-on:click="changeImage(2)">Chat</button>
-        <button v-on:click="changeImage(3)">Lapin</button>
+        <form v-on:submit="addTask">
+            <fieldset>
+                <legend>To Do List</legend>
+                <label for="task">Tache</label>
+                <input type="text" name="task" id="task">
+                <br/>
+                <label for="size">Taille</label>
+                <input type="text" name="size" id="size">
+                <br/>
+                <label for="severity">Etiquette</label>
+                <select name="severity" id="severity">
+                    <option value="0">Urgent</option>
+                    <option value="1">Better</option>
+                    <option value="2">Good</option>
+                </select>
+                <br/>
+                <input type="submit" value="Valider">
 
+            </fieldset>
+        </form>
 
+        <h1>Liste</h1>
+        <ul>
+            <li v-for="task of todos" :class="{ 'red': task.severity ==='0', 'orange': task.severity ==='1', 'green': task.severity ==='2' }" :style="{'font-size': task.size + 'px'}">
+                {{ task.name }}</li>
+        </ul>
     </div>
 </body>
 
