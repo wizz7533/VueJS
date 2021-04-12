@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="../vue.global.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="shortcut icon" href="../vuejs.png" type="image/png">
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="sayHello('bonjour')">Dire Bonjour</button>
+        <br/>
+        <button v-on:click="sayHello('bye')">Dire Au revoir</button>
+        <p>Prenom: {{ prenom }}</p>
+        <button v-on:click="changerPrenom">Changer</button>
+        <br/>
+        <!-- @ est le raccourcis de v-on: -->
+        <button @click="changerPrenom">Changer</button>
+        <br/>
+        <!-- Attention, le $ est obligatoire -->
+        <input type="text" v-on:input="afficherValeur($event)" />
+        <br/>
+        <!-- L'évènement est passé automatiquement si on ne le précise pas -->
+        <input type="text" @input="afficherValeur" />
+        <br/>
+        <!-- Liaison a double sens -->
+        <p>Prenom: {{ prenom }}</p>
+        <input type="text" :value="prenom" @input="editPrenom" />
+        <br/>
+        <input type="text" v-model="prenom">
+    </div>
+</body>
+
+</html>

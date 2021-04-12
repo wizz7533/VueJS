@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="../vue.global.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="shortcut icon" href="../vuejs.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Le style et les classes CSS</h1>
+        <!-- {nom de la classe: boolean} -->
+        <p v-bind:class="{active: isActive}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod excepturi cupiditate consequuntur quo dolorem? Modi doloribus aspernatur commodi voluptate perspiciatis itaque qui voluptatibus iure accusantium eveniet! Ex, neque dolorem! Inventore.
+        </p>
+        <p v-bind:class="mesClasses">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit unde quia explicabo odio illum expedita nobis eos est totam recusandae, aliquam delectus labore sunt, a quae veritatis amet! Ipsam, sed?
+        </p>
+        <button v-on:click="isActive = true">Activer</button>
+        <button v-on:click="isActive = false">Désactiver</button>
+
+        <p v-bind:style="{fontSize: '30px'}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel placeat quisquam minus mollitia ullam aperiam cum corrupti excepturi quos culpa error repudiandae, ut sit inventore tempore, ex ducimus animi nam.
+        </p>
+        <p v-bind:style="monStyle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in perspiciatis iusto harum numquam veritatis. Eum iste ex recusandae molestiae nesciunt, quidem perspiciatis corporis eligendi, natus enim fugit ratione mollitia!
+        </p>
+    </div>
+</body>
+
+</html>
