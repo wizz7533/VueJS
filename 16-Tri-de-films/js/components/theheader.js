@@ -9,7 +9,7 @@ const TheHeader = {
     },
     template: `
         <header>
-            <h1>Super Site !</h1>
+            <h1>FILMS</h1>
             <img src="https://via.placeholder.com/150" alt="placeholder image" />
             <TheNavigationHeader></TheNavigationHeader>
         </header>
