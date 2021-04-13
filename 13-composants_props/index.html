@@ -14,8 +14,11 @@
 
 <body>
     <div id="app">
-        <v-header></v-header>
-        <v-footer></v-footer>
+        <v-header bgColor="black" nbElement="5"></v-header>
+        <v-footer msg="Bonjour Tout le Monde" :visible="true"></v-footer>
+        <!-- On peut utiliser la liaison d'attribut -->
+        <v-footer v-bind:msg="message" :visible="false"></v-footer>
+        <v-footer :msg="message" :visible="true"></v-footer>
 
     </div>
 </body>

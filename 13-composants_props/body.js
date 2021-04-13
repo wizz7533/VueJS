@@ -1,4 +1,4 @@
-// Composant Local
+// Composant Local : injection nécessaire avec la propriété components:
 const VBodyComponent = {
     name: 'Body',
     data() {
