@@ -7,19 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuejs</title>
     <script src="../../vue.global.js"></script>
-    <script src="app.js" type="module" defer></script>
+    <script src="app.js" defer></script>
     <link rel="shortcut icon" href="../vuejs.png" type="image/png">
 
 </head>
 
 <body>
     <div id="app">
-        <v-header bgColor="black" nbElement="5"></v-header>
-        <v-footer msg="Bonjour Tout le Monde" :visible="true"></v-footer>
-        <!-- On peut utiliser la liaison d'attribut -->
-        <v-footer v-bind:msg="message" :visible="false"></v-footer>
-        <v-footer :msg="message" :visible="true"></v-footer>
-
+        <p>Parent Compteur {{ parentCount }}</p>
+        <v-card></v-card>
     </div>
 </body>
 
