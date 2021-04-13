@@ -12,11 +12,12 @@
 
 </head>
 
-<body>
-    <div id="app">
-        <p>Parent Compteur {{ parentCount }}</p>
-        <v-card></v-card>
-    </div>
-</body>
+<div id="app">
+    <p>Parent Compteur {{ parentCount }}</p>
+    <v-card :compteur="parentCount" @my-incrementer-compteur="incrementerParent">
+        <!-- v-on:my-incrementer-compteur="incrementerParent($event)"> -->
+
+    </v-card>
+</div>
 
 </html>
