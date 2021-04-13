@@ -77,8 +77,10 @@ app.component('the-body', {
 
     },
     template: `
-        <h2>{{ title }}</h2>
-        <v-article @click="modifier()"></v-article>
+        <body>
+            <h2>{{ title }}</h2>
+            <v-article @click="modifier()"></v-article>
+        </body>
     `,
     components: {
         'v-article': {
