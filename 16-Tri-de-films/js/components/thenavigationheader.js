@@ -6,7 +6,7 @@ const TheNavigationHeader = {
         }
     },
     template: `
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">FILMS</a>
             <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
