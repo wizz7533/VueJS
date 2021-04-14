@@ -1,20 +1,13 @@
 <template>
   <div>
     <v-title></v-title>
+    <Counter></Counter>
   </div>
 </template>
 
 <script>
-/* createApp(
-  {
-    name: 'App',
-    components: {
-      HelloWorld
-    }
-}
-).mount('#app') */
-import Title from './components/Title.vue';
-
+import Title from './components/i-decouverte/Title.vue';
+import Counter from './components/ii-store/Counter';
 export default {
   name: 'App',
   data() {
@@ -25,7 +18,9 @@ export default {
   components: {
     //  'Title': Title,
     //  Title,
-    'v-title': Title
+    //  TheNavigationHeader,
+    'v-title': Title,
+    Counter
   }
 }
 </script>

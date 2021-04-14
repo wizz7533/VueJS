@@ -30,11 +30,12 @@ const ClickCount = {
     computed: {}
 }
 
+
 export default ClickCount;
 </script>
 
-<style>
-.parentCount {
+<style scoped>
+p {
     background-color: yellow;
 }
 </style>
