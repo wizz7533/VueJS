@@ -7,7 +7,7 @@
 
 <script>
 import ChildCompteur from './ChildCompteur.vue';
-// export default { data() {}, methods: {}, computed: {}}
+
 const ClickCount = {
     data() {
         return {
@@ -18,9 +18,6 @@ const ClickCount = {
         incrementerParent(event) {
         console.log("Event: ", event);
         console.log("Type of Event: ", typeof event);
-        // Pas de event.target.value
-        // Car c'est notre propres evenement
-        // et il renvoie un simple nombre
         this.parentCount = event;
         }
     },

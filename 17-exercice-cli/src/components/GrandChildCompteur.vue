@@ -6,7 +6,7 @@
 </template>
 
 <script>
-// export default { data() {}, methods: {}, computed: {}}
+
 const GrandChildCompteur = {
     name: 'GrandChildCompteur',
     data() {
@@ -18,10 +18,6 @@ const GrandChildCompteur = {
     methods: {
         incrementergc() {
             this.GrandChildCount++;
-            // Déclenchement d'un évènement personnalisé
-            // la fonction emit prend 2 arguments:
-            // 1- le nom de l'évènement ( je peux mettre le nom que je veux)
-            // 2- La valeur / variable/objet ... à transmettre ( le corps de l'évènement)
             this.$emit('my-incrementer-gccompteur', this.GrandChildCount);
         }
     },

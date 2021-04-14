@@ -7,7 +7,7 @@
 
 <script>
 import GrandChildCompteur from './GrandChildCompteur.vue';
-// export default { data() {}, methods: {}, computed: {}}
+
 const ChildCompteur = {
     name: 'ChildCompteur',
     data() {
@@ -19,10 +19,6 @@ const ChildCompteur = {
     methods: {
         incrementerChild(event) {
             this.childCount= event;
-            // Déclenchement d'un évènement personnalisé
-            // la fonction emit prend 2 arguments:
-            // 1- le nom de l'évènement ( je peux mettre le nom que je veux)
-            // 2- La valeur / variable/objet ... à transmettre ( le corps de l'évènement)
             this.$emit('my-incrementer-compteur', this.childCount);
         }
     },
